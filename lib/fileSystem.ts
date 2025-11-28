@@ -140,6 +140,6 @@ declare global {
 
   interface FileSystemHandle {
     readonly kind: 'file' | 'directory';
-    name: string;
+    readonly name: string;
   }
 }
