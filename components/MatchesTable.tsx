@@ -20,10 +20,10 @@ interface MatchesTableProps {
 export default function MatchesTable({ matches }: MatchesTableProps) {
   if (matches.length === 0) {
     return (
-      <div data-component="matches-table-empty" className="text-center py-12">
-        <FileVideo className="mx-auto h-12 w-12 text-[#787878]" />
-        <p data-element="empty-state-title" className="mt-4 font-medium text-[#787878]">No matches to display</p>
-        <p data-element="empty-state-description" className="mt-2 text-sm text-[#787878]">Select folders and analyze to see video matches</p>
+      <div data-component="matches-table-empty" className="text-center py-8 sm:py-12 px-4">
+        <FileVideo className="mx-auto h-10 w-10 sm:h-12 sm:w-12 text-[#787878]" />
+        <p data-element="empty-state-title" className="mt-4 font-medium text-sm sm:text-base text-[#787878]">No matches to display</p>
+        <p data-element="empty-state-description" className="mt-2 text-xs sm:text-sm text-[#787878]">Select folders and analyze to see video matches</p>
       </div>
     );
   }
@@ -98,9 +98,9 @@ export default function MatchesTable({ matches }: MatchesTableProps) {
   };
 
   return (
-    <div data-component="matches-table" className="rounded-md border border-[#323232]">
-      <Table className="[&_tr]:border-[#323232]">
-        <TableHeader data-element="matches-table-header" className="bg-[#262626] [&_th]:text-[#fafafa]">
+    <div data-component="matches-table" className="rounded-md border border-[#323232] overflow-x-auto">
+      <Table className="[&_tr]:border-[#323232] min-w-[800px]">
+        <TableHeader data-element="matches-table-header" className="bg-[#262626] [&_th]:text-[#fafafa] [&_th]:text-xs [&_th]:sm:text-sm">
           <TableRow className="hover:bg-[#262626]">
             <TableHead data-column="input-video">Input Video</TableHead>
             <TableHead data-column="output-video">Output Video</TableHead>
@@ -110,7 +110,7 @@ export default function MatchesTable({ matches }: MatchesTableProps) {
             <TableHead data-column="new-name">New Name</TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody data-element="matches-table-body" className="bg-[#0a0a0a] text-[#fafafa]">
+        <TableBody data-element="matches-table-body" className="bg-[#0a0a0a] text-[#fafafa] [&_td]:text-xs [&_td]:sm:text-sm">
           {matches.map((match, index) => (
             <TableRow
               key={index}

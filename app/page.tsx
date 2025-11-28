@@ -233,12 +233,12 @@ export default function Home() {
   };
 
   return (
-    <main data-page="home" className="@container/main min-h-screen p-12">
+    <main data-page="home" className="@container/main min-h-screen p-4 sm:p-8 md:p-12">
       <div data-element="page-container" className="max-w-[1200px] mx-auto">
         {/* Header */}
-        <div data-section="header" className="mb-[74px] text-center">
-          <h1 data-element="page-title" className="text-[48px] leading-[53px] font-semibold mb-2">THE RENAMENING</h1>
-          <p data-element="page-subtitle" className="text-[18px] leading-[28px] font-normal text-[#f7fafc]">
+        <div data-section="header" className="mb-8 sm:mb-12 md:mb-[74px] text-center">
+          <h1 data-element="page-title" className="text-3xl sm:text-4xl md:text-[48px] leading-tight md:leading-[53px] font-semibold mb-2">THE RENAMENING</h1>
+          <p data-element="page-subtitle" className="text-sm sm:text-base md:text-[18px] leading-relaxed md:leading-[28px] font-normal text-[#f7fafc] px-4">
             Match and rename videos based on metadata - blazing fast, no upload required
           </p>
         </div>
@@ -248,10 +248,10 @@ export default function Home() {
 
         {/* Folder Selection */}
         <Card data-section="folder-selection" className="mb-6 bg-gradient-to-b from-[#171717] to-[#222121] shadow-xs border-[#323232]">
-          <CardHeader className="px-12 pt-12 pb-3">
+          <CardHeader className="px-4 sm:px-8 md:px-12 pt-6 sm:pt-8 md:pt-12 pb-3">
             <CardTitle data-element="section-title">Select Folders</CardTitle>
           </CardHeader>
-          <CardContent data-element="folder-selection-content" className="space-y-4 px-12 pt-3 pb-12">
+          <CardContent data-element="folder-selection-content" className="space-y-4 px-4 sm:px-8 md:px-12 pt-3 pb-6 sm:pb-8 md:pb-12">
             <FolderSelector
               label="Input Folder"
               description="Select folder with original videos"
@@ -288,23 +288,23 @@ export default function Home() {
 
         {/* Matches Table */}
         <Card data-section="matches-preview" className="mb-6 bg-gradient-to-b from-[#171717] to-[#222121] shadow-xs border-[#323232]">
-          <CardHeader className="px-12 pt-12 pb-3">
+          <CardHeader className="px-4 sm:px-8 md:px-12 pt-6 sm:pt-8 md:pt-12 pb-3">
             <CardTitle data-element="section-title">Results</CardTitle>
           </CardHeader>
-          <CardContent data-element="matches-preview-content" className="px-12 pt-3 pb-12">
+          <CardContent data-element="matches-preview-content" className="px-4 sm:px-8 md:px-12 pt-3 pb-6 sm:pb-8 md:pb-12">
             <MatchesTable matches={matches} />
           </CardContent>
         </Card>
 
         {/* Action Buttons */}
         <Card data-section="action-buttons" className="bg-transparent border-0 shadow-none">
-          <CardContent className="flex justify-center gap-4 py-6">
+          <CardContent className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 py-4 sm:py-6 px-4">
             <Button
               data-element="rename-button"
               onClick={handleRename}
               disabled={matches.length === 0 || isRenaming}
               size="lg"
-              className="px-8 bg-[#e5e5e5] hover:bg-[#e5e5e5]/90 font-medium"
+              className="w-full sm:w-auto px-6 sm:px-8 bg-[#e5e5e5] hover:bg-[#e5e5e5]/90 font-medium"
             >
               Rename Videos
             </Button>
@@ -314,7 +314,7 @@ export default function Home() {
               disabled={isAnalyzing || isRenaming}
               variant="outline"
               size="lg"
-              className="px-8 border border-[#0a0a0a] hover:bg-[#1b1b1b] hover:border-[#f7fafc] transition-all duration-300 ease-in-out font-medium"
+              className="w-full sm:w-auto px-6 sm:px-8 border border-[#0a0a0a] hover:bg-[#1b1b1b] hover:border-[#f7fafc] transition-all duration-300 ease-in-out font-medium"
             >
               Clear
             </Button>
