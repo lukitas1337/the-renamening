@@ -320,6 +320,11 @@ export default function Home() {
             </Button>
           </CardContent>
         </Card>
+
+        {/* Footer */}
+        <footer data-section="footer" className="mt-12 text-center">
+          <p className="text-sm text-[#787878]">Thank God Luki built this! &lt;3</p>
+        </footer>
       </div>
     </main>
   );
