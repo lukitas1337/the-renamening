@@ -41,7 +41,7 @@ export async function getVideoFiles(dirHandle: FileSystemDirectoryHandle): Promi
     if (entry.kind === 'file') {
       const lowerName = entry.name.toLowerCase();
       if (videoExtensions.some(ext => lowerName.endsWith(ext))) {
-        files.push(entry);
+        files.push(entry as FileSystemFileHandle);
       }
     }
   }
