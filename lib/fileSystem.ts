@@ -139,7 +139,7 @@ declare global {
   }
 
   interface FileSystemHandle {
-    kind: 'file' | 'directory';
+    readonly kind: 'file' | 'directory';
     name: string;
   }
 }
