@@ -17,10 +17,10 @@ export default function BrowserCheck() {
   }
 
   return (
-    <Alert data-component="browser-check" variant="warning" className="mb-6 bg-[#0a0a0a] border-[#e25455] text-[#e25455]">
-      <AlertCircle className="h-4 w-4 text-[#e25455]" />
-      <AlertTitle data-element="browser-check-title" className="text-[#e25455]">Browser Not Supported</AlertTitle>
-      <AlertDescription data-element="browser-check-description" className="text-[#e25455]">
+    <Alert data-component="browser-check" variant="warning" className="mb-6">
+      <AlertCircle className="h-4 w-4" />
+      <AlertTitle data-element="browser-check-title">Browser Not Supported</AlertTitle>
+      <AlertDescription data-element="browser-check-description">
         <p data-element="browser-check-message" className="mt-2">{support.message}</p>
         <p data-element="browser-check-requirement" className="mt-2">
           This app requires the File System Access API, which is currently only available in:
