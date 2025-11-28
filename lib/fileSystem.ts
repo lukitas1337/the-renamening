@@ -130,7 +130,7 @@ declare global {
   interface FileSystemFileHandle {
     getFile(): Promise<File>;
     createWritable(): Promise<FileSystemWritableFileStream>;
-    name: string;
+    readonly name: string;
   }
 
   interface FileSystemWritableFileStream {
