@@ -17,7 +17,7 @@ export default function BrowserCheck() {
   }
 
   return (
-    <Alert data-component="browser-check" variant="warning" className="mb-6">
+    <Alert data-component="browser-check" variant="warning" className="mb-6 bg-[#0a0a0a] border-[#323232]">
       <AlertCircle className="h-4 w-4" />
       <AlertTitle data-element="browser-check-title">Browser Not Supported</AlertTitle>
       <AlertDescription data-element="browser-check-description">
