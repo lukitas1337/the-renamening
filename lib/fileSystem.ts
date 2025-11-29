@@ -34,7 +34,15 @@ export async function selectDirectory(mode: 'read' | 'readwrite' = 'readwrite'):
 }
 
 export async function getVideoFiles(dirHandle: FileSystemDirectoryHandle): Promise<FileSystemFileHandle[]> {
-  const videoExtensions = ['.mp4', '.mov', '.avi', '.mkv', '.flv', '.wmv', '.m4v'];
+  const videoExtensions = [
+    '.mp4', '.mov', '.avi', '.mkv', '.flv', '.wmv', '.m4v',
+    '.mpeg', '.mpg', '.mpe', '.m2v', '.m4p',
+    '.hevc', '.h265', '.265',
+    '.webm', '.ogv',
+    '.3gp', '.3g2',
+    '.vob', '.ts', '.m2ts', '.mts',
+    '.divx', '.xvid', '.asf', '.rm', '.rmvb'
+  ];
   const files: FileSystemFileHandle[] = [];
 
   for await (const entry of dirHandle.values()) {
