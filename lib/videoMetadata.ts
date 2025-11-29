@@ -10,7 +10,10 @@ export interface VideoMetadata {
 }
 
 export function getFingerprint(metadata: VideoMetadata): string {
-  return `${metadata.width}x${metadata.height}_${metadata.durationMs}`;
+  // Round duration to nearest 150ms bucket for fuzzy matching
+  // This handles encoding differences while staying precise
+  const durationBucket = Math.round(metadata.durationMs / 150) * 150;
+  return `${metadata.width}x${metadata.height}_${durationBucket}`;
 }
 
 export async function extractVideoMetadata(
