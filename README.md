@@ -2,7 +2,7 @@
 
 A modern web application that automatically matches and renames exported videos to their original filenames based on video metadata (resolution and duration). All processing happens **100% in your browser** - no files are uploaded to any server.
 
-🚀 **[Live Demo](#)** (Add your Vercel URL here after deployment)
+🚀 **[Live Version](https://the-renamening.vercel.app/)**
 
 ## Features
 
